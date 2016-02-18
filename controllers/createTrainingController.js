@@ -1,4 +1,4 @@
-mainApp.controller('createTrainingController', ,['$scope','$http','$location','$rootScope',
+mainApp.controller('createTrainingController', ['$scope','$http','$location','$rootScope',
 	'dataService','statusService',
 	function($scope, $http, $location, $rootScope,dataService, statusService) {
 
