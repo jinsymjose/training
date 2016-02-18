@@ -9,4 +9,8 @@ $scope.training_list = data;
 $scope.training = $filter('filter')($scope.training_list, function (d) {return d.id === index})[0];
 
 });
+
+$scope.Add = function () {
+      alert("clicked");
+       }
 }]);
