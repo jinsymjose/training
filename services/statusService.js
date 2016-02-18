@@ -1,6 +1,9 @@
 mainApp.service('statusService', [
 		'$rootScope',
 		function($rootScope) {
+			
+			//Function to save the sattus
+
 			this.saveStatus = function(statusData) {
 
 				$rootScope.statusHistory.push({
