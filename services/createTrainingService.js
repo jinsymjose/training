@@ -2,20 +2,21 @@ mainApp.service('createTrainingService', [
 		'$rootScope',
 		function($rootScope) {
 			this.saveTrainings = function(trainings) {
+	$rootScope.training_list.push({
 
-				$rootScope.trainingData.push({
-
-					Training_id : trainings.Trainings.Training_id.value,
-					Topic : trainings.Trainings.Topic.title,
-					Who : trainings.Trainings.Who.title,
-					StartTime : trainings.Trainings.StartTime.value,
-					EndTime : trainings.Trainings.EndTime.title,
-					Where : trainings.Trainings.Where.title,
-					Seats : trainings.Trainings.Seats.value,
-					Description : trainings.Trainings.Description.description,
-					Invitation : trainings.Trainings.Invitation.name.title,
-					Seats : trainings.Trainings.Seats.value
+					id : $rootScope.training_list.length+1,
+					topic : trainings.topic.title,
+					//Who : trainings.Trainings.Who.title,
+					startTime : trainings.startTime.title,
+					endTime : trainings.endTime.title,
+					medium : trainings.medium.title,
+					where : trainings.venue.title,
+					seats : trainings.seats,
+					description : trainings.description,
+					//Invitation : trainings.Trainings.Invitation.name.title,
+					//Seats : trainings.Trainings.Seats.value
 				});
+console.log($rootScope.training_list);
 				return true;
 			};
 }]);

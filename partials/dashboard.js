@@ -50,7 +50,7 @@
     .state('trainings', {
             url: "/trainings",
             templateUrl: "views/trainingList.html",
-            controller: 'trainingDetailsController'
+            controller: 'createTrainingController'
         })
     .state('trainingDetails', {
             url: "/trainingDetails/:index",
