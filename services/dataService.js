@@ -8,6 +8,24 @@ mainApp.factory('dataService', [
 								return response.data;
 							});
 				},
+				getTime : function() {
+					return $http.get('partials/time_list.json').then(
+							function(response) {
+								return response.data;
+							});
+				},
+				getMedium : function() {
+					return $http.get('partials/medium.json').then(
+							function(response) {
+								return response.data;
+							});
+				},
+				getVenue : function() {
+					return $http.get('partials/venue.json').then(
+							function(response) {
+								return response.data;
+							});
+				},
 				getActivities : function() {
 					return $http.get('partials/activity_list.json').then(
 							function(response) {
@@ -81,4 +99,4 @@ mainApp.factory('dataService', [
 							});
 				}
 			}
-		} ]);
+	} ]);
