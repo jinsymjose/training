@@ -52,12 +52,12 @@
             templateUrl: "views/trainingList.html",
             controller: 'trainingDetailsController'
         })
-.state('trainingDetails', {
+    .state('trainingDetails', {
             url: "/trainingDetails/:index",
             templateUrl: "views/trainingDetailsView.html",
            controller:'trainingDetailsController'
         });
-})
+    })
 
 
             

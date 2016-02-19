@@ -1,47 +1,24 @@
-mainApp.controller('createTrainingController', ['$scope','$http','$location','$rootScope',
-	'dataService','statusService',
-	function($scope, $http, $location, $rootScope,dataService, statusService) {
-
-		createTrainingService.getProjects().then(function(data) {
-			$scope.project_list = data;
+mainApp.controller('createTrainingController',
+	['$scope','$http','$location','$rootScope',
+	'dataService','createTrainingService',
+	function($scope, $http, $location, $rootScope,dataService, createTrainingService) {
+		dataService.getTime().then(function(data) {
+			$scope.time_list = data;
 		});
-		createTrainingService.getActivities().then(function(data) {
-			$scope.activity_list = data;
+		dataService.getVenue().then(function(data) {
+			$scope.venue = data;
 		});
-		createTrainingService.getStatusHistory().then(function(data) {
-			$rootScope.statusHistory = data;
+		dataService.getMedium().then(function(data) {
+			$rootScope.medium = data;
 		});
-		$scope.status = {};
-		$scope.formData = {};
-		$scope.hours = dataService.getHours();
-		$scope.minutes = dataService.getMinutes();
-		$scope.dates = dataService.getDates();
-		$scope.status.date = $scope.dates[0];
-		$scope.status.hour = $scope.hours[8];
-		$scope.status.minute = $scope.minutes[0];
-		$scope.addItem = function(status) {
-			var success = statusService.saveStatus(status);
-			if (success) {
-				clearfields();
-				formData = statusService.setDetails(status,
-						$scope.dates);
-				if (formData.dateIncrement == 1
-						&& formData.dateFieldId != 0) {
-					$scope.status.date = $scope.dates[formData.dateFieldId - 1];
-				} else if (formData.dateIncrement == 1
-						&& formData.dateFieldId == 0) {
-					$scope.status.date = $scope.dates[0];
-				}
+		dataService.gettrainingData().then(function(data) {
+			$rootScope.trainingData= data;
+		});
 
-				$scope.status.hour = $scope.hours[formData.hourValue];
-				$scope.status.minute = $scope.minutes[formData.minuteValue / 15];
-			}
-
+		$scope.addItem = function(training) {
+			var success = createTrainingService.saveTrainings(training);
 		};
 
-		var clearfields = function() {
-			$scope.status.project = '';
-			$scope.status.activity = '';
-			$scope.status.description = '';
-		};
+
+
 	} ]);
