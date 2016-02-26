@@ -2,9 +2,10 @@ mainApp.controller('createTrainingController',
 	['$scope','$http','$location','$rootScope',
 	'dataService','createTrainingService',
 	function($scope, $http, $location, $rootScope,dataService, createTrainingService) {
-dataService.getTrainingList().then(function(data) {
-$rootScope.training_list = data;
-});
+		
+		dataService.getTrainingList().then(function(data) {
+			$rootScope.training_list = data;
+		});
 		dataService.getTime().then(function(data) {
 			$scope.time_list = data;
 		});
@@ -17,13 +18,13 @@ $rootScope.training_list = data;
 		/*dataService.gettrainingData().then(function(data) {
 			$rootScope.trainingData= data;
 		});*/
-
+		$scope.training = $rootScope.training_details;
 		$scope.addItem = function(training) {
 
 			var success = createTrainingService.saveTrainings(training);
-if(success){
-$location.path('/trainings').replace();
-};
+				if(success){
+					$location.path('/trainings').replace();
+				};
 
 		};
 

@@ -22,25 +22,45 @@ nav ul li a {
     color: #1996CA;
     font-weight: bold;
     padding: 5px 0px 6px 1px;
+    font-size: 16px;
+    
+}
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    outline: none !important;
+}
+.training_list {
+    border: 1px solid #DDDDDD;
+    padding: 1%;
+    background-color: white;
+    font-size: 12px;
+    z-index: -1;
+}
+.training_topic{
+    color:#5598D7;
+    padding: 1%;
 }
 nav {
-    width: 132px;
+    width: 172px;
     float: left;
     padding-right: 15px;
-        height: 1000px;
+    height: 1000px;
     background-color: #EEEEEE;
+    padding-top: 27px;
 }
 .main-container.ng-scope {
     overflow: auto;
     border-left: 2px solid black;
     padding-left: 15px;
-        height: 1000px;
+    height: 1000px;
 
 }
 li {
     margin-bottom: 7px;
     padding: 5px;
-    border: 1px solid;
+   /* border: 1px solid;*/
     border-radius: 2px;
 }
 table, th, td { 
@@ -135,7 +155,7 @@ button {
     border: none;
     cursor: pointer;
     padding: 5px;
-    color: white;
+    color: white !important;
     width: 65px;
     border-radius: 3px;
     outline: none;
@@ -233,10 +253,12 @@ overflow: auto;
 }
 
 .submit {
-    position: absolute;
-    left: 50%;
+    width: 100%;
+    text-align: -webkit-center;
 }
-
+input.btn.btn-primary {
+    width: 60px;
+}
 .main {
     position: absolute;
     padding-top: 20%;
@@ -252,7 +274,7 @@ overflow: auto;
     background-color: #fff;
     background-image: none;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0 !important;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
@@ -267,37 +289,73 @@ textarea {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-/*.submit input {
-    outline: none;
-    cursor: pointer;
-    margin-left: 5px;
-    background: #06a3e4;
-    color: white;
-    border: none;
-    width: 80px;
-    height: 30px;
-    border-radius: 3px;
-    font-size: 14px;
+.textArea {
+    width: 64%;
 }
-*/
 div#trainingDetails-wrap {
     margin-top: 50px !important;
     width: 85%;
-   height: 870px;
     margin: auto;
-    padding: 20px;
-    background: #F3F3F3;
-    border: 1px solid;
+    border: 1px solid #DFDFDF;
+    padding: 10px;
+    padding-right: 0px;
+    background-color: #EFF4F9;
 }
 div#trainingDetails-wrap div {
     padding: 10px;
+    display: inline-block;
 }
 div#trainingDetails-wrap label {
     padding-right: 20px;
 }
-select{
+#trainingDetails-wrap select{
     outline: none;
 }
-input{
+#trainingDetails-wrap input{
     outline: none;
+}
+#trainingDetails-wrap select {
+    height: 28px !important;
+    /* padding: 4px 12px; */
+}
+th {
+    text-align: center !important;
+}
+td, th {
+    padding: 10px !important;
+}
+a:hover, a:focus {
+    color: black !important;
+    text-decoration: none !important;
+}
+.history_third_div.col-md-2.ng-binding {
+    overflow: hidden;
+}
+#trainingDetails-wrap input {
+    display: flex !important;
+}
+.Documents {
+    width: 80%;
+}
+.full-width {
+    width: 30%;
+}
+.Start select {
+    width: 100px;
+}
+.field_div {
+    width: 25%;
+}
+.field_div select {
+    width: 100px;
+}
+.full-width:first-child {
+    margin-right: 85px;
+}
+.Venue {
+    width: 30%;
+    margin-right: 70px;
+}
+.Start {
+    width: 30%;
 }

@@ -1,10 +1,11 @@
 <div id="trainingDetails-wrap">
+<div id="wrapper">
 <form ng-submit="addItem(training)" name="statusForm" novalidate>
-	<div>
+	<div class="full-width">
 		<label>Topic</label>
 		<input type="text" name="" value="" placeholder="" ng-model="training.topic">
 	</div>
-	<div>
+	<div class="Start">
 		<label>Start Time</label>
 		<select ng-model="training.startTime" class="minute form-control" name="multiple="" nute in minutes" ng-options="startTime.title for startTime in time_list" required>
 		</select>
@@ -14,31 +15,31 @@
 		<label>End Time</label>
 		<select ng-model="training.endTime" class="minute form-control" name="multiple="" nute in minutes" ng-options="endTime.title for endTime in time_list" required></select>
 	</div>
-	<div>
+	<div class="Venue">
 		<label>Venue</label>
 		<select ng-model="training.venue" class="minute form-control" name="multiple="" nute in minutes" ng-options="venue as venue.title for venue in venue " required></select>
 	</div>
-	<div>
+	<div class="Seats">
 		<label>Available Seats</label>
 		<input type="text" name="" value="" placeholder="" ng-model="training.seats">
 	</div>
-	<div>
+	<div class="Seats">
 		<label>Medium</label>
 		<select ng-model="training.medium" class="minute form-control" name="multiple="" nute in minutes" ng-options="medium as medium.title for medium in medium " required></select>
 	</div>
-	<div>
+	<div class="textArea">
 		<label>Description</label>
 		<textarea rows="5" cols="60" ng-model="training.description"
 			name="description" class="form-control"required>
 		</textarea>
 	</div>
-	<div>
+	<div class="textArea">
 		<label>Send Invitation(s) to</label>
 		<textarea rows="5" cols="60" ng-model="training.invitation"
 			name="description" class="form-control">
 		</textarea>
 	</div>
-	<div>
+	<div class="Documents">
 		<label>Training Documents</label>
 		<input type="text" name="" value="" placeholder="" ng-model="training.documents">
 	</div>
@@ -47,4 +48,5 @@
 		ng-disabled="statusForm.$invalid">
 	</div>
 	</form>
+</div>
 </div>
