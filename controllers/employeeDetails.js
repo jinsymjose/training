@@ -35,7 +35,7 @@ mainApp.controller('employeeDetailsController', function($scope, $location, $tim
             $scope.history.push($rootScope.records[index]);
 
             // Remove from main records (using index)
-            $rootScope.records.splice(index, 1);
+            // $rootScope.records.splice(index, 1);
         };
 
         // Reset new data model

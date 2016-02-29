@@ -19,6 +19,7 @@ mainApp.controller('createTrainingController',
 			$rootScope.trainingData= data;
 		});*/
 		$scope.training = $rootScope.training_details;
+		// $scope.training = $rootScope.training_list;
 		$scope.addItem = function(training) {
 
 			var success = createTrainingService.saveTrainings(training);
