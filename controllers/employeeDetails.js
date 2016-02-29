@@ -4,7 +4,7 @@ mainApp.controller('employeeDetailsController', function($scope, $location, $tim
    // Historical data
         $scope.history = [];
 
-        $http.get('partials/dashboard.json').success(function(data){
+        $http.get('assets/dashboard.json').success(function(data){
             $rootScope.records = data;
         });
 
@@ -29,13 +29,13 @@ mainApp.controller('employeeDetailsController', function($scope, $location, $tim
         // Delete data
         $scope.Delete = function (index) {
             // Remove first / oldest element from history if it reaches maximum capacity of 10 records
-            if ($scope.history.length === 10)
-                $scope.history.shift();
+            // if ($scope.history.length === 10)
+            //     $scope.history.shift();
             // Add deleted record to historical records
             $scope.history.push($rootScope.records[index]);
 
             // Remove from main records (using index)
-            // $rootScope.records.splice(index, 1);
+            $rootScope.records.splice(index, 1);
         };
 
         // Reset new data model

@@ -10,16 +10,10 @@
             controller: "employeeDetailsController"
 
         })
-       .state('employeeDetails.list', {
-           url: "/list",
-           templateUrl: "views/employeeDetails.list.html",
-           controller: "employeeDetailsController"
-       })
-          
-        .state('statusUpdate', {
-            url: "/statusUpdate",
-            templateUrl: "views/statusUpdate.html",
-            controller: 'statusUpdateController'
+        .state('employeeDetails.list', {
+            url: "/list",
+            templateUrl: "views/employeeDetails.list.html",
+            controller: "employeeDetailsController"
         })
         .state('trainingList', {
             url: "/trainingList",

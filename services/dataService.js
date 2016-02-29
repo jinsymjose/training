@@ -2,38 +2,39 @@ mainApp.factory('dataService', [
 		'$http',
 		function($http) {
 			return {
+				
 				getProjects : function() {
-					return $http.get('partials/project_list.json').then(
+					return $http.get('assets/project_list.json').then(
 							function(response) {
 								return response.data;
 							});
 				},
 				getTime : function() {
-					return $http.get('partials/time_list.json').then(
+					return $http.get('assets/time_list.json').then(
 							function(response) {
 								return response.data;
 							});
 				},
 				getMedium : function() {
-					return $http.get('partials/medium.json').then(
+					return $http.get('assets/medium.json').then(
 							function(response) {
 								return response.data;
 							});
 				},
 				getVenue : function() {
-					return $http.get('partials/venue.json').then(
+					return $http.get('assets/venue.json').then(
 							function(response) {
 								return response.data;
 							});
 				},
 				getActivities : function() {
-					return $http.get('partials/activity_list.json').then(
+					return $http.get('assets/activity_list.json').then(
 							function(response) {
 								return response.data;
 							});
 				},
 				getStatusHistory : function() {
-					return $http.get('partials/history.json').then(
+					return $http.get('assets/history.json').then(
 							function(response) {
 								return response.data;
 							});
@@ -87,13 +88,13 @@ mainApp.factory('dataService', [
 					return dates;
 				},
 				getTrainingList : function() {
-					return $http.get('partials/training_details.json').then(
+					return $http.get('assets/training_details.json').then(
 							function(response) {
 								return response.data;
 							});
 				},
 				getTrainingDetails : function() {
-					return $http.get('partials/training_details.json').then(
+					return $http.get('assets/training_details.json').then(
 							function(response) {
 								return response.data;
 							});

@@ -6,7 +6,7 @@ mainApp.service('createTrainingService', [
 
 					id : $rootScope.training_list.length+1,
 					topic : trainings.topic.title,
-					//Who : trainings.Trainings.Who.title,
+					Who : trainings.who,
 					startTime : trainings.startTime.title,
 					endTime : trainings.endTime.title,
 					medium : trainings.medium.title,

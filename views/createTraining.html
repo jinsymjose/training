@@ -1,10 +1,22 @@
 <div id="trainingDetails-wrap">
 <div id="wrapper">
 <form ng-submit="addItem(training)" name="statusForm" novalidate>
+<div class="full_width">
 	<div class="full-width">
 		<label>Topic</label>
-		<input type="text" name="" value="" placeholder="" ng-model="training.topic">
+		<input type="text" name="" value="" placeholder="" ng-model="training.topic" required>
 	</div>
+	<div class="full-width">
+		<label>Who</label>
+		<input type="text" name="" value="" placeholder="" ng-model="training.who" required>
+	</div>
+</div>
+	<!-- <div class="Start">
+		<label>Date</label>
+		<select ng-model="training.date" type="date" required></select>
+
+	</div> -->
+<div class="full_width">
 	<div class="Start">
 		<label>Start Time</label>
 		<select ng-model="training.startTime" class="minute form-control" name="multiple="" nute in minutes" ng-options="startTime.title for startTime in time_list" required>
@@ -19,30 +31,39 @@
 		<label>Venue</label>
 		<select ng-model="training.venue" class="minute form-control" name="multiple="" nute in minutes" ng-options="venue as venue.title for venue in venue " required></select>
 	</div>
+</div>
+<div class="full_width">
 	<div class="Seats">
 		<label>Available Seats</label>
-		<input type="text" name="" value="" placeholder="" ng-model="training.seats">
+		<input type="number" name="" value="" placeholder="" ng-model="training.seats">
 	</div>
 	<div class="Seats">
 		<label>Medium</label>
 		<select ng-model="training.medium" class="minute form-control" name="multiple="" nute in minutes" ng-options="medium as medium.title for medium in medium " required></select>
 	</div>
+</div>
+<div class="full_width">
 	<div class="textArea">
 		<label>Description</label>
 		<textarea rows="5" cols="60" ng-model="training.description"
 			name="description" class="form-control"required>
 		</textarea>
 	</div>
+</div>
+<div class="full_width">
 	<div class="textArea">
 		<label>Send Invitation(s) to</label>
 		<textarea rows="5" cols="60" ng-model="training.invitation"
 			name="description" class="form-control">
 		</textarea>
 	</div>
+</div>
+<div class="full_width">
 	<div class="Documents">
 		<label>Training Documents</label>
 		<input type="text" name="" value="" placeholder="" ng-model="training.documents">
 	</div>
+</div>
 	<div class="submit">
 		<input type="submit" value="Save" class="btn btn-primary"
 		ng-disabled="statusForm.$invalid">

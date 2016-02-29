@@ -2,7 +2,7 @@
 	<h2> Employee Details</h2>
 	{{message}}
     <div class="add-employee">
-        <a  ui-sref=".list" ng-click="showList()">Add</a>
+        <a ui-sref=".list" ng-click="showList()">Add</a>
     </div>
 	<div class="list_data">
         <table>
@@ -33,25 +33,4 @@
 
      <div ui-view></div>
   
-<!--     <div class="add_data">
-        <h1>Add Data</h1>
-        <form ng-submit="Add()">
-            <div class="field">
-                <label for="state">Name: </label>
-                <input id="state" type="text" placeholder="Enter Name" maxlength="" ng-model="newState" required>
-            </div>
-            <div class="field">
-                <label id="price" for="price">Salary: </label>
-                <input  type="number" placeholder="Price" ng-model="newPrice">
-            </div>
-            <div class="field">
-                <label id="tax" id="tax" for="tax">Tax: </label>
-                <input  type="number" placeholder="Tax" ng-model="newTax">
-            </div>
-            <div class="action">
-                <button type="submit">Add</button>
-                <button ng-click="Reset()">Reset</button>
-            </div>
-        </form>
-    </div>	 -->
 </section>
